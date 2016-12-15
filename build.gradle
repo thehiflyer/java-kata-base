@@ -1,4 +1,18 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        //Needed only for SNAPSHOT versions
+        //maven { url "http://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+    dependencies {
+        classpath 'info.solidsoft.gradle.pitest:gradle-pitest-plugin:1.1.10'
+    }
+}
+
 apply plugin: 'java'
+apply plugin: "info.solidsoft.pitest"
+
+group = 'se.hiflyer'
 
 repositories {
     mavenCentral()
